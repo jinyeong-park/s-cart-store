@@ -11,6 +11,11 @@ function Header() {
         </input>
       </div>
 
+      <div className='header__nav'>
+        <div className='header__option'>
+          <span className='header__option'></span>
+        </div>
+      </div>
 
     </div>
   )
