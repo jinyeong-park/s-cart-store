@@ -10,7 +10,12 @@ function Home() {
 
         <div className='home_row'>
 
-          <Product />
+          <Product
+            title='Diptyque Doson'
+            price={152}
+            image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
+            rating={5}
+            />
           <Product />
         </div>
 
