@@ -13,10 +13,23 @@ function Home() {
           <Product
             title='Diptyque Perfume Doson'
             condition='Almost new'
-            price={38}
+            price={90}
             image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
             rating={5}
             />
+          <Product
+            title='[Refurbished] Apple - MacBook Pro - 16" Display with Touch Bar - Intel Core i7 - 16GB Memory - 512GB SSD - Space Gray'
+            price={1100}
+            condition='Good'
+            image='https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6366/6366564_sd.jpg'
+            rating={4}
+          />
+
+
+        </div>
+
+        <div className='home_row'>
+
           <Product
             title='CHANEL Aged Calfskin Quilted 2.55 Reissue 226 Flap Black'
             condition='Good'
@@ -24,17 +37,7 @@ function Home() {
             image='https://www.fashionphile.com/images/product-images/thumb/3ab0b98ff0565c8e099a5e8e6c0b2bf9/1ba36119ee329bec22ae0714e9a287a0.jpg'
             rating={4}
           />
-        </div>
 
-        <div className='home_row'>
-
-          <Product
-              title='[Refurbished] Apple - MacBook Pro - 16" Display with Touch Bar - Intel Core i7 - 16GB Memory - 512GB SSD - Space Gray'
-              price={1100}
-              condition='Good'
-              image='https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6366/6366564_sd.jpg'
-              rating={4}
-            />
           <Product
             title='[Used] Apple Watch 38mm Series 2 Aluminum GPS with Sport Band MP0D2LL/A'
             price={120}

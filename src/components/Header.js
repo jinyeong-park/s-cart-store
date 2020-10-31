@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className='header'>
 
-      <img className='header__logo' src='https://bookable-rooms-images.s3.us-east-2.amazonaws.com/sCart-logo-black.png'/>
+      <img className='header__logo' src='https://i.imgur.com/Q3TUC8Z_d.webp?maxwidth=728&fidelity=grand'/>
       <div className='header__search'>
         <input className='header__searchInput' type='text' placeholder='Search..' />
         <SearchIcon className='header__searchIcon'/>
