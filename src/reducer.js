@@ -3,6 +3,10 @@ export const initialState = {
   cart: []
 }
 
+// selector
+export const getCartTotal = (cart) =>
+  cart?.reduce((amount, item) => item.price + amount, 0);
+
 // REDUCER = always listening
 const reducer = (state, action) => {
   console.log('action in reducer', action)

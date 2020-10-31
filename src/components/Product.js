@@ -4,12 +4,12 @@ import { useStateValue } from '../StateProvider';
 
 function Product({id, title, condition, price, image, rating }) {
 
+// dispatch: how to manipulate data
 // const [state, dispatch] = useStateValue();
 const [{ cart }, dispatch] = useStateValue();
 // state: global state
 console.log('cart >>>>', cart)
-// console.log('cart >>>>', state)
-// dispatch: how to manipulate data
+
 
   const addToCart = () => {
     // dispatch the item into the data layer (action & action item)
