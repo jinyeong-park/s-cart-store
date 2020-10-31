@@ -1,7 +1,13 @@
 import React from 'react';
 import '../styles/Product.css';
 
-function Product({title, condition, price, image, rating }) {
+function Product({id, title, condition, price, image, rating }) {
+
+
+  const addToCart = () => {
+    // dispatch the item into the data layer
+
+  }
   return (
     <div className='product'>
       <div className='product__info'>
