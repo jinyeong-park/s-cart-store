@@ -30,8 +30,11 @@ function Header() {
           <span className='header__optionLineTwo'>& Orders</span>
         </div>
 
+
         <div className='headere__optionCart'>
+        <Link to='/checkout'>
           <ShoppingCartIcon />
+        </Link>
           <span className='header__optionLineTwo header__basketCount'>0</span>
         </div>
 
