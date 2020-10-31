@@ -1,12 +1,29 @@
 import React from 'react';
 import '../styles/Product.css';
+import { useStateValue } from '../StateProvider';
 
 function Product({id, title, condition, price, image, rating }) {
 
+// const [state, dispatch] = useStateValue();
+const [{ cart }, dispatch] = useStateValue();
+// state: global state
+console.log('cart >>>>', cart)
+// console.log('cart >>>>', state)
+// dispatch: how to manipulate data
 
   const addToCart = () => {
-    // dispatch the item into the data layer
-
+    // dispatch the item into the data layer (action & action item)
+    dispatch({
+      type: 'ADD_TO_CART',
+      item: {
+        id: id,
+        title: title,
+        condition: condition,
+        price: price,
+        image: image,
+        rating: rating
+      }
+    })
   }
   return (
     <div className='product'>
@@ -25,7 +42,7 @@ function Product({id, title, condition, price, image, rating }) {
       </div>
 
       <img src={image} alt=""/>
-      <button>Add to Cart</button>
+      <button onClick={addToCart}>Add to Cart</button>
     </div>
   )
 }

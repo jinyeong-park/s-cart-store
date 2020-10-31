@@ -1,10 +1,11 @@
+// state
 export const initialState = {
   cart: []
 }
 
 // REDUCER = always listening
 const reducer = (state, action) => {
-  console.log('reducer')
+  console.log('action in reducer', action)
 
   switch(action.type) {
     case 'ADD_TO_CART':
