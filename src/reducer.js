@@ -18,8 +18,28 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.item],
       };
 
-      default:
-        return state;
+    case 'REMOVE_FROM_CART':
+      const index = state.cart.findIndex(
+        cartItem => cartItem.id === action.id
+      );
+      let newCart = [...state.cart];
+
+      if (index >= 0) {
+        newCart.splice(index, 1);
+
+      } else {
+        console.warn(
+          `cannot remove product (id: ${action.id}) as it is not in the cart`
+        )
+      }
+
+      return {
+        ...state,
+        cart: newCart
+      }
+
+    default:
+      return state;
   }
 }
 

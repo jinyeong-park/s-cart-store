@@ -1,0 +1,36 @@
+.checkoutItem {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.checkoutItem__info {
+  padding-left: 20px
+}
+
+.checkoutItem > image{
+  object-fit: contain;
+  width: 180px;
+  height: 180px;
+
+}
+
+.checkoutItem__title {
+  font-size: 17px;
+  font-weight: 800;
+}
+.checkoutItem__rating {
+  display: flex;
+}
+
+.checkoutItem__info > button{
+  background: #8b8888;
+  border: 1px solid;
+  margin-top: 10px;
+  border: none;
+  color: white;
+  border-radius: 24px;
+  padding: 7px;
+  font-weight: 800;
+
+}
