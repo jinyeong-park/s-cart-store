@@ -13,8 +13,8 @@ function Home() {
           <Product
             id='1'
             title='Diptyque Perfume Doson'
-            condition='Almost new'
             price={90}
+            condition='Almost new'
             image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
             rating={5}
             />
@@ -35,8 +35,8 @@ function Home() {
           <Product
             id='3'
             title='CHANEL Aged Calfskin Quilted 2.55 Reissue 226 Flap Black'
-            condition='Good'
             price={4050}
+            condition='Good'
             image='https://www.fashionphile.com/images/product-images/thumb/3ab0b98ff0565c8e099a5e8e6c0b2bf9/1ba36119ee329bec22ae0714e9a287a0.jpg'
             rating={4}
           />
@@ -64,6 +64,7 @@ function Home() {
 
         <div className='home_row'>
         <Product
+            id='6'
             title='39 in. x 16 in. "Classic Orchid" by Graham and Brown Printed Canvas Wall Art'
             price={39.55}
             condition='New'

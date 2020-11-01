@@ -8,6 +8,7 @@ import { useStateValue } from '../StateProvider'
 
 function Checkout() {
   const [{ cart }, dispatch] = useStateValue();
+  console.log('cartitem', cart)
 
   return (
     <div className='checkout'>
@@ -19,7 +20,7 @@ function Checkout() {
           {cart.map(item => <CheckoutItem
             id={item.id}
             title= {item.title}
-            conditon= {item.condition}
+            condition= {item.condition}
             price= {item.price}
             image= {item.image}
             rating= {item.rating}
