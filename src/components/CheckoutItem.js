@@ -5,9 +5,6 @@ import StarIcon from '@material-ui/icons/Star';
 
 function CheckoutItem({id, title, condition, price, image, rating }) {
 
-  console.log('id in CheckoutItem', id)
-  console.log('title in CheckoutItem', title)
-  console.log('condition in CheckoutItem', condition)
   const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCart = () => {
