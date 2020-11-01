@@ -7,7 +7,6 @@ function Login() {
   return (
     <div className='login'>
       <Link to='/'>
-
         <img className='login__logo' src='https://i.imgur.com/Q3TUC8Z_d.webp?maxwidth=728&fidelity=grand' />
       </Link>
 
@@ -26,6 +25,7 @@ function Login() {
 
         <button className='login__signUpButton'>Create your sCart Account</button>
       </div>
+
     </div>
   )
 }
