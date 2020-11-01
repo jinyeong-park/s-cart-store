@@ -17,6 +17,11 @@
 
 .product__rating {
   display: flex;
+  color: orange;
+}
+
+.product__starIcon {
+  margin-right:-3px;
 }
 
 .product > img {

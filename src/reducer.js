@@ -28,7 +28,7 @@ const reducer = (state, action) => {
         newCart.splice(index, 1);
 
       } else {
-        console.warn(
+        console.log(
           `cannot remove product (id: ${action.id}) as it is not in the cart`
         )
       }

@@ -16,16 +16,16 @@ function Checkout() {
         <div>
           <h2 className='checkout__title'>Your Shopping Cart</h2>
           {/* {cart.map(item => <CheckoutItem item={item}/>)} */}
-          {/* {cart.map(item => <CheckoutItem
+          {cart.map(item => <CheckoutItem
             id={item.id}
             title= {item.title}
             conditon= {item.condition}
             price= {item.price}
             image= {item.image}
             rating= {item.rating}
-            />)} */}
+            />)}
 
-          <CheckoutItem
+          {/* <CheckoutItem
             id='1'
             title='Diptyque Perfume Doson'
             condition='Almost new'
@@ -42,7 +42,7 @@ function Checkout() {
             price={90}
             image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
             rating={5}
-          />
+          /> */}
 
           {/* CheckoutItem */}
           {/* CheckoutItem */}

@@ -1,12 +1,15 @@
 import React from 'react';
 import '../styles/CheckoutItem.css';
 import { useStateValue } from '../StateProvider';
+import StarIcon from '@material-ui/icons/Star';
 
 function CheckoutItem({id, title, condition, price, image, rating }) {
 
+  console.log('id before remove fn', id)
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromCart = () => {
+    console.log('selected id', id)
     // to do
     dispatch({
       type: 'REMOVE_FROM_CART',
@@ -25,8 +28,9 @@ function CheckoutItem({id, title, condition, price, image, rating }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
+        <p className='product__condition'>Condition: {condition}</p>
         <div className='checkoutItem__rating'>
-          {Array(rating).fill().map(() =>  <p>★</p>)}
+         {Array(rating).fill().map(() =>  <p className='checkoutItem__starIcon'><StarIcon fontSize="small" /></p>)}
         </div>
         <button onClick={removeFromCart}>Remove from Cart</button>
       </div>

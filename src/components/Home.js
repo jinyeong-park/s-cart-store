@@ -11,6 +11,7 @@ function Home() {
         <div className='home_row'>
 
           <Product
+            id='1'
             title='Diptyque Perfume Doson'
             condition='Almost new'
             price={90}
@@ -18,6 +19,7 @@ function Home() {
             rating={5}
             />
           <Product
+            id='2'
             title='[Refurbished] Apple - MacBook Pro - 16" Display with Touch Bar - Intel Core i7 - 16GB Memory - 512GB SSD - Space Gray'
             price={1100}
             condition='Good'
@@ -31,6 +33,7 @@ function Home() {
         <div className='home_row'>
 
           <Product
+            id='3'
             title='CHANEL Aged Calfskin Quilted 2.55 Reissue 226 Flap Black'
             condition='Good'
             price={4050}
@@ -39,6 +42,7 @@ function Home() {
           />
 
           <Product
+            id='4'
             title='[Used] Apple Watch 38mm Series 2 Aluminum GPS with Sport Band MP0D2LL/A'
             price={120}
             condition='Good'
@@ -48,6 +52,7 @@ function Home() {
 
 
           <Product
+            id='5'
             title='Tadwick Patio 3 Piece Bistro Set'
             price={299}
             condition='New'
