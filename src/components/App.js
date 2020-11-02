@@ -15,20 +15,22 @@ function App() {
 
           {/* use react router */}
           <Switch>
-            <Route path="/">
-              <Header />
-              <Home />
-            </Route>
 
-            <Route path="/checkout">
+            <Route path='/checkout'>
               <Header />
               <Checkout />
             </Route>
 
-            <Route path="/login">
+            <Route path='/login'>
               <Login />
 
             </Route>
+
+            <Route path='/'>
+              <Header />
+              <Home />
+            </Route>
+
           </Switch>
       </div>
     </Router>

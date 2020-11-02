@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
 import { Link, useHistory } from 'react-router-dom';
-import { auth } from '../firebase.js';
+// import { auth } from '../firebase.js';
 
 
 function Login() {
@@ -14,33 +14,33 @@ function Login() {
     e.preventDefault();
 
     // firebase login logic
-    // https://firebase.google.com/docs/auth/web/start
-    // auth
-    //     .signInWithEmailAndPassword(email, password)
-    //     .then(auth => {
-    //         history.push('/')
-    //         // browserHistory.push('/')
-    //     })
-    //     .catch(error => alert(error.message)
-    //     );
+    https://firebase.google.com/docs/auth/web/start
+    auth
+        .signInWithEmailAndPassword(email, password)
+        .then(auth => {
+            history.push('/')
+            // browserHistory.push('/')
+        })
+        .catch(error => alert(error.message)
+        );
   }
 
   // Sign-Up
   const signUp = e => {
     e.preventDefault();
     // firebase auth logic
-    // auth
-    //     .createUserWithEmailAndPassword(email, password)
-    //     .then((auth) => {
-    //       // if it return auth object
-    //       console.log('authentification success and auth object:', auth);
-    //       if (auth) {
-    //         // browserHistory.push('/')
-    //         history.push('/')
-    //       }
-    //     })
-    //     .catch(error => alert(error.message)
-    // );
+    auth
+        .createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+          // if it return auth object
+          console.log('authentification success and auth object:', auth);
+          if (auth) {
+            // browserHistory.push('/')
+            history.push('/')
+          }
+        })
+        .catch(error => alert(error.message)
+    );
 
   }
 
