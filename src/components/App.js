@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/App.css';
 import Header from './Header';
 import Home from './Home';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Checkout from './Checkout';
 import Login from './Login';
+import { auth } from '../firebase.js';
+import { useStateValue } from '../StateProvider.js'
+
 
 function App() {
-  console.log('APP')
+  const [{}, dispatch] = useStateValue();
+
+  // componentDidMount
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+      console.log('THE USER IS >>>', authUser);
+
+      if (authUser) {
+
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+
+      } else {
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
+  }, [])
+
+
   return (
 
     <Router>

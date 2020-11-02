@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
 import { Link, useHistory } from 'react-router-dom';
-// import { auth } from '../firebase.js';
+import { auth } from '../firebase.js';
 
 
 function Login() {
-  console.log('Login page')
+  const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -14,12 +14,12 @@ function Login() {
     e.preventDefault();
 
     // firebase login logic
-    https://firebase.google.com/docs/auth/web/start
+    //https://firebase.google.com/docs/auth/web/start
     auth
         .signInWithEmailAndPassword(email, password)
         .then(auth => {
+          // if auth is successful, redirect to home
             history.push('/')
-            // browserHistory.push('/')
         })
         .catch(error => alert(error.message)
         );
@@ -32,10 +32,9 @@ function Login() {
     auth
         .createUserWithEmailAndPassword(email, password)
         .then((auth) => {
-          // if it return auth object
+          // If signup is successful, return auth object
           console.log('authentification success and auth object:', auth);
           if (auth) {
-            // browserHistory.push('/')
             history.push('/')
           }
         })
