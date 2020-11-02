@@ -7,7 +7,8 @@ import { useStateValue } from '../StateProvider'
 
 
 function Checkout() {
-  const [{ cart }, dispatch] = useStateValue();
+  const [{ cart, user }, dispatch] = useStateValue();
+  const usernameFromEmail = user ? user.email.split('@').[0] : 'Guest'
   console.log('cartitem', cart)
 
   return (
@@ -15,6 +16,7 @@ function Checkout() {
       <div className='checkout__left'>
         <img className='checkout__ad' src="" alt=""/>
         <div>
+          <h3>Hello, {usernameFromEmail}</h3>
           <h2 className='checkout__title'>Your Shopping Cart</h2>
           {/* {cart.map(item => <CheckoutItem item={item}/>)} */}
           {cart.map(item => <CheckoutItem

@@ -10,6 +10,7 @@ function Header() {
 
   // const [state, dispatch] = useStateValue();
   const [{ cart, user }, dispatch] = useStateValue();
+  const usernameFromEmail = user ? user.email.split('@').[0] : 'Guest'
 
   const handleAuthentication = () => {
     if (user) {
@@ -33,7 +34,7 @@ function Header() {
       <div className='header__nav'>
         <Link to='/login'>
           <div className='header__option'>
-            <span className='header__optionLineOne'>Hello Guest</span>
+  <span className='header__optionLineOne'>Hello {usernameFromEmail}</span>
             <span className='header__optionLineTwo' onClick={handleAuthentication}>{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
         </Link>
