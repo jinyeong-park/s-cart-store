@@ -9,7 +9,7 @@ function Product({id, title, condition, price, image, rating }) {
 // const [state, dispatch] = useStateValue();
 const [{ cart }, dispatch] = useStateValue();
 // state: global state
-console.log('cart >>>>', cart)
+// console.log('cart in Product >>>>', cart)
 
 
   const addToCart = () => {

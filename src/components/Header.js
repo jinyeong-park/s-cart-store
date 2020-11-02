@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider'
 
 function Header() {
+  console.log('Header')
   // const [state, dispatch] = useStateValue();
   const [{ cart }, dispatch] = useStateValue();
 
@@ -16,11 +17,11 @@ function Header() {
      <Link to='/'>
       <img className='header__logo' src='https://i.imgur.com/Q3TUC8Z_d.webp?maxwidth=728&fidelity=grand'/>
      </Link>
-      <div className='header__search'>
-        <input className='header__searchInput' type='text' placeholder='Search..' />
-        <SearchIcon className='header__searchIcon'/>
 
-      </div>
+    <div className='header__search'>
+      <input className='header__searchInput' type='text' placeholder='Search..' />
+      <SearchIcon className='header__searchIcon'/>
+    </div>
 
       <div className='header__nav'>
         <Link to='/login'>
@@ -30,22 +31,19 @@ function Header() {
           </div>
         </Link>
 
-
         <div className='header__option'>
            <span className='header__optionLineOne'>Returns</span>
           <span className='header__optionLineTwo'>& Orders</span>
         </div>
 
         <Link to='/checkout'>
-          <div className='headere__optionCart'>
+          <div className='header__optionCart'>
             <ShoppingCartIcon />
-  <span className='header__optionLineTwo header__basketCount'>{cart.length}</span>
+            <span className='header__optionLineTwo header__basketCount'>{cart.length}</span>
           </div>
-
         </Link>
 
       </div>
-
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { useStateValue } from '../StateProvider'
 
 
 function Checkout() {
+  console.log('Checkout')
   const [{ cart }, dispatch] = useStateValue();
   console.log('cartitem', cart)
 
