@@ -2,9 +2,11 @@ import React from 'react';
 import '../styles/Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
 import { useStateValue } from '../StateProvider'
-import { getCartTotal } from '../reducer'
+import { getCartTotal } from '../reducer';
+import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
+  const history = useHistory();
   const [{ cart }, dispatch] = useStateValue();
   // let totalPrice = 0;
   // console.log('cart', cart)
@@ -27,7 +29,8 @@ function Subtotal() {
          prefix={"$"}
       />
 
-      <button>Proceed to Checkout</button>
+      {/* react-router-dom => history.push : push into the browser, redirect but keep the design */}
+      <button onClick={ e => history.push('/payment')}>Proceed to Checkout</button>
     </div>
   );
 }
