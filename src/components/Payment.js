@@ -12,13 +12,13 @@ function Payment() {
       <div className='payment__container'>
         <h1>
           Checkout {
-            <Link to='/checkout'>{cart?.length} items</Link>
+            <Link to='/checkout'>({cart?.length} items)</Link>
           }
         </h1>
 
         {/* payment info for address */}
         <div className='payment__section'>
-          <div className='payment_title'>
+          <div className='payment__title'>
             <h3>Delivery Address</h3>
           </div>
           <div className='payment__address'>
@@ -29,27 +29,27 @@ function Payment() {
         </div>
 
         {/* payment info for review items */}
-        <div className='payment_section'>
-          <div className='payment_title'>
+        <div className='payment__section'>
+          <div className='payment__title'>
             <h3>Review items and delivery</h3>
           </div>
-        <div className='payment_items'>
-          {/* reuse the CheckoutItem component to show checkoout item */}
-          {cart.map(item =>
-            <CheckoutItem
-              id={item.id}
-              title= {item.title}
-              condition= {item.condition}
-              price= {item.price}
-              image= {item.image}
-              rating= {item.rating}
-            />)}
+          <div className='payment__item'>
+            {/* reuse the CheckoutItem component to show checkoout item */}
+            {cart.map(item =>
+              <CheckoutItem
+                id={item.id}
+                title= {item.title}
+                condition= {item.condition}
+                price= {item.price}
+                image= {item.image}
+                rating= {item.rating}
+              />)}
+          </div>
         </div>
-      </div>
 
         {/* payment infor for payment method */}
-        <div className='payment_section'>
-          <div className='payment__title'>
+        <div className='payment__section'>
+          <div className='payment___title'>
             <h3>Payment Method</h3>
           </div>
           <div className='payment__details'>
