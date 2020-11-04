@@ -6,7 +6,8 @@ import CheckoutItem from './CheckoutItem';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from '../reducer';
-import axios from '../axios'
+import axios from '../axios';
+import { db } from '../firebase'
 
 
 function Payment() {
@@ -17,7 +18,7 @@ function Payment() {
   const element = useElements()
 
   const [processing, setProcessing] = useState("");
-  const [suucceeded, setSucceeded] = useState(false);
+  const [succeeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState(true);
@@ -36,6 +37,9 @@ function Payment() {
     getClientSecret();
   }, [cart])
 
+  console.log('The clientSecret:', clientSecret)
+  console.log('user:', user)
+
 
 
   const handleSubmit = async (event) => {
@@ -52,9 +56,26 @@ function Payment() {
     .then(({ paymentIntent }) => {
       // paymentIntent : payment confirmation from stripe
       // if payment is successful
+
+      // firestore db query
+      db.collection('user')
+        .doc(user?.uid)
+        .collection('orders')
+        .doc(paymentIntent.id)
+        .set({
+          cart: cart,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        })
+
       setSucceeded(true);
       setError(null);
       setProcessing(false);
+
+      // After payment, empty cart and redirect to order page
+      dispatch({
+        type: 'EMPTY_CART'
+      })
 
       history.replace('/orders')
     })
