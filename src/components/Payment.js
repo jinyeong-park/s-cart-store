@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import '../styles/Payment.css';
 import { useStateValue } from '../StateProvider.js';
 import CheckoutItem from './CheckoutItem';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from '../reducer';
+import axios from '../axios'
+
 
 function Payment() {
   const [{ cart, user }, dispatch] = useStateValue();
+  const history = useHistory();
 
   const stripe = useStripe();
   const element = useElements()
@@ -17,9 +20,44 @@ function Payment() {
   const [suucceeded, setSucceeded] = useState(false);
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
+  const [clientSecret, setClientSecret] = useState(true);
 
-  const handleSubmit = e => {
+  useEffect(() => {
+    // generate the special strripe secret which allows us to charge a customer
+    const getClientSecret = async () => {
+
+      const response = await axios({
+        method: 'post',
+        // stripe expects the ttotal in a currencies submits / *100 --change dollars to cent
+        url: `/payments/create?total=${getCartTotal(cart) * 100}`
+      });
+      setClientSecret(response.data.clientSecret)
+    }
+    getClientSecret();
+  }, [cart])
+
+
+
+  const handleSubmit = async (event) => {
     // stripe logic
+    event.preventDefault();
+    setProcessing(true);
+
+    // clientSecret: charge info etc
+    const payload = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement)
+      }
+    })
+    .then(({ paymentIntent }) => {
+      // paymentIntent : payment confirmation from stripe
+      // if payment is successful
+      setSucceeded(true);
+      setError(null);
+      setProcessing(false);
+
+      history.replace('/orders')
+    })
   }
 
   const handleChange = e => {
@@ -96,9 +134,11 @@ function Payment() {
                   succeeded}>
                     <span>{processing ? <p>Processing</p> :
                     "Buy Now"}</span>
-
                   </button>
               </div>
+
+                {/* error handling */}
+                {error && <div>{error}</div>}
             </form>
 
           </div>
