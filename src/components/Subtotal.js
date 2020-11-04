@@ -29,7 +29,7 @@ function Subtotal() {
          prefix={"$"}
       />
 
-      {/* react-router-dom => history.push : push into the browser, redirect but keep the design */}
+      {/* react-router-dom => history.push : push into the browser, redirect keep the design */}
       <button onClick={ e => history.push('/payment')}>Proceed to Checkout</button>
     </div>
   );

@@ -30,6 +30,7 @@
 
 }
 
-.payment__address, .payment__item{
+/* add payment__details for stripe section */
+.payment__address, .payment__item, .payment__details{
   flex: 0.8;
 }

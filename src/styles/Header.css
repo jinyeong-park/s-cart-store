@@ -61,17 +61,21 @@
   margin-right: 10px;
 }
 
+/* payment css */
+/* .header__option > span a {
+  text-decoration: none;
+} */
+
 .header__optionLineOne {
   font-size: 10px;
   color: #3B4114;
-  /* text-decoration: none; */
 }
+
 
 .header__optionLineTwo {
   font-size: 13px;
   font-weight: 800;
   color: #3B4114;
-  /* text-decoration: none; */
 }
 
 .headere__optionCart {
