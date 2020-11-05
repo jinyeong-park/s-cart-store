@@ -23,7 +23,7 @@ function Header() {
 
      {/*  when clicking logo -> go to main homepage */}
      <Link to='/'>
-      <img className='header__logo' src='https://i.imgur.com/Q3TUC8Z_d.webp?maxwidth=728&fidelity=grand'/>
+      <img className='header__logo' src='https://i.imgur.com/B0eaVD2.png'/>
      </Link>
 
     <div className='header__search'>

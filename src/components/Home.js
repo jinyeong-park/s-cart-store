@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='home'>
       <div className='home_container'>
-        <img className='home_image' src='' alt='' />
+        <img className='home_image' src='https://i.imgur.com/qydIey7.png' alt='' />
 
         <div className='home_row'>
 
