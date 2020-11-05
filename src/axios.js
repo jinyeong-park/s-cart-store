@@ -2,7 +2,9 @@ import axios from 'axios';
 
 const instance = axios.create({
   // api url
-  baseURL: 'http://localhost:5001/e-commerce-scart/us-central1/api'
+  baseURL: 'https://us-central1-e-commerce-scart.cloudfunctions.net/api'
+  // baseURL: 'http://localhost:5001/e-commerce-scart/us-central1/api'
+
 })
 
 

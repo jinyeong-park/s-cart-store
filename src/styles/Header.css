@@ -1,5 +1,5 @@
 .header {
-  height: 60px;
+  height: 70px;
   display: flex;
   align-items: center;
   /* background-color: #131921;  dark theme*/
@@ -13,7 +13,8 @@
 
 .header__logo {
   width: 100px;
-  object-fit: contain;
+  height: 70px;
+  /* object-fit: contain; */
   margin: 0 10px;
   margin-top: 5px;
 }
@@ -61,14 +62,11 @@
   margin-right: 10px;
 }
 
-/* payment css */
-/* .header__option > span a {
-  text-decoration: none;
-} */
 
 .header__optionLineOne {
   font-size: 10px;
   color: #3B4114;
+  text-decoration: none;
 }
 
 
@@ -77,6 +75,7 @@
   font-weight: 800;
   color: #3B4114;
 }
+
 
 .headere__optionCart {
   display: flex;

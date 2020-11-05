@@ -34,14 +34,14 @@
 }
 
 
-.checkoutItem__info > button{
+.checkoutItem__info > button {
   background: #8b8888;
   border: 1px solid;
   margin-top: 10px;
   border: none;
   color: white;
   border-radius: 24px;
-  padding: 7px;
+  padding: 7px 14px;
   font-weight: 800;
-
 }
+

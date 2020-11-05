@@ -13,6 +13,11 @@ const app = express();
 app.use(cors({ origin: true }));
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 // API routes
 app.get('/', (request, response) => response.status(200).send('success'))
 // app.get('/jenny', (request, response) => response.status(200).send('hello jenny'))

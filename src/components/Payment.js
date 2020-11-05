@@ -7,7 +7,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import { getCartTotal } from '../reducer';
 import axios from '../axios';
-import { db } from '../firebase'
+import { db } from '../firebase.js'
 
 
 function Payment() {
@@ -15,7 +15,7 @@ function Payment() {
   const history = useHistory();
 
   const stripe = useStripe();
-  const element = useElements()
+  const elements = useElements()
 
   const [processing, setProcessing] = useState("");
   const [succeeded, setSucceeded] = useState(false);
@@ -40,8 +40,6 @@ function Payment() {
   console.log('The clientSecret:', clientSecret)
   console.log('user:', user)
 
-
-
   const handleSubmit = async (event) => {
     // stripe logic
     event.preventDefault();
@@ -65,7 +63,7 @@ function Payment() {
         .set({
           cart: cart,
           amount: paymentIntent.amount,
-          created: paymentIntent.created,
+          created: paymentIntent.created
         })
 
       setSucceeded(true);
@@ -91,11 +89,11 @@ function Payment() {
   return (
     <div className='payment'>
       <div className='payment__container'>
-        <h1>
+        <h3>
           Checkout {
             <Link to='/checkout'>({cart?.length} items)</Link>
           }
-        </h1>
+        </h3>
 
         {/* payment info for address */}
         <div className='payment__section'>
@@ -130,7 +128,7 @@ function Payment() {
 
         {/* payment infor for payment method */}
         <div className='payment__section'>
-          <div className='payment___title'>
+          <div className='payment__title'>
             <h3>Payment Method</h3>
           </div>
           <div className='payment__details'>
@@ -140,9 +138,9 @@ function Payment() {
               <div className='payment__priceContainer'>
                 <CurrencyFormat
                     renderText={(value) => (
-                        <h3>
+                        <h4>
                           Order total: {value}
-                        </h3>
+                        </h4>
                     )}
                     decimalScale={2}
                     value={getCartTotal(cart)}
@@ -151,7 +149,7 @@ function Payment() {
                     prefix={"$"}
                   />
 
-                 <button disabled={processing || disabled ||
+                 <button className='payment__btn' disabled={processing || disabled ||
                   succeeded}>
                     <span>{processing ? <p>Processing</p> :
                     "Buy Now"}</span>

@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { db } from './firebase';
+import { db } from '../firebase';
 import '../styles/Orders.css';
-import { useStateValue } from './StateProvider';
-import Order from '.Order'
+import { useStateValue } from '../StateProvider';
+import Order from './Order'
 
 function Orders() {
+  console.log('orders')
   const [{ cart, user }, dispatch] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
     if (user) {
+      // show recent order first
       db
-        .collection('users')
+        .collection('user')
         .doc(user?.uid)
         .collection('orders')
         .orderBy('created', 'desc')
@@ -30,12 +32,14 @@ function Orders() {
     <div className='orders'>
       <h1>Your Orders</h1>
 
-      <div className='orders_order'>
-        {orders?.map(order => {
-          <Order />
-        })}
-      </div>
+      <div className='orders__order'>
+        {/* debugging */}
 
+        {orders?.map(order => (
+          <Order order={order}/>
+        )
+        )}
+      </div>
     </div>
   )
 }

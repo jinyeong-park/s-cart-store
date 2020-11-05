@@ -2,7 +2,7 @@
   background-color: white;
 }
 
-.payment__container > h1 {
+.payment__container > h3 {
   text-align: center;
   padding: 10px;
   font-weight: 400;
@@ -11,7 +11,7 @@
 }
 
 /* remove underline */
-.payment__container > h1 a {
+.payment__container > h3 a {
   text-decoration: none;
 }
 
@@ -33,4 +33,21 @@
 /* add payment__details for stripe section */
 .payment__address, .payment__item, .payment__details{
   flex: 0.8;
+}
+
+.payment__priceContainer {
+  margin-top: 10px;
+}
+
+.payment__btn {
+  margin-top: 10px;
+}
+
+
+.payment__details > form {
+  max-width: 400px;
+}
+
+.payment__details > h4 {
+  padding-bottom: 20px;
 }
