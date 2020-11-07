@@ -7,8 +7,6 @@ function Home() {
 
   const [{ displayItems }, dispatch] = useStateValue();
 
-
-
   return (
     <div className='home'>
       <div className='home_container'>

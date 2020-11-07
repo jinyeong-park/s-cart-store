@@ -9,7 +9,7 @@
   - Payment
   - Trending Items
 
-## Screeenshot
+## Screenshot
 ![sCart](./sCart_screenshot.png)
 
 ## Deploy
