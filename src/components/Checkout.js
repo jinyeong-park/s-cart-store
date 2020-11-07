@@ -28,8 +28,6 @@ function Checkout() {
             rating= {item.rating}
             />)}
 
-
-
           {/* CheckoutItem */}
           {/* CheckoutItem */}
           {/* CheckoutItem */}

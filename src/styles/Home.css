@@ -7,20 +7,18 @@
   max-width: 1500px;
 }
 
-/* layout - rows */
+/* layout - rows - use Grid*/
 .home_row {
   /* display: flex; */
-  z-index: 2;
-  margin-left: 5px;
-  margin-right: 5%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5%;
   grid-auto-rows: minmax(100px, auto);
 
-
-
-  }
+  z-index: 2;
+  margin-left: 5px;
+  margin-right: 5%;
+}
 
 .home_image {
   width: 100%;
