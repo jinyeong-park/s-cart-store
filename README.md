@@ -1,5 +1,19 @@
 # sCart App
-deploy >> https://e-commerce-scart.web.app/
+  > E-commerce website 'sCart - Find your taste'
+  - The easy way to sell or buy almost anything.
+  - If you get something you don't use, never used or just outgrew? Sell it.
+
+## Features
+  - Login & Signup
+  - Checkout & Order
+  - Payment
+  - Trending Items
+
+## Screeenshot
+![sCart](./sCart_screenshot.png)
+
+## Deploy
+  > https://e-commerce-scart.web.app/
 
 ### `npm start`
 
@@ -14,14 +28,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-## Heading ##
-  > E-commerce website 'sCart - Find your taste'
 
-## Sub-Heading ##
-  > The easy way to sell or buy almost anything.
-
-## Summary ##
-  > If you get something you don't use, never used or just outgrew? Sell it.
 
 
 
