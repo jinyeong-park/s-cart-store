@@ -8,7 +8,6 @@ function CheckoutItem({id, title, condition, price, image, rating, hideButton })
   const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCart = () => {
-    // console.log('selected id', id)
     // to do
     dispatch({
       type: 'REMOVE_FROM_CART',
