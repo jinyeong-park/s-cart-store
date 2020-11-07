@@ -14,6 +14,9 @@
 
 ## Deploy
   > https://e-commerce-scart.web.app/
+  or
+  > https://jinyeong-park.github.io/s-cart-store/
+
 
 ### `npm start`
 
