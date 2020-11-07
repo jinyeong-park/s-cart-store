@@ -21,12 +21,18 @@ function Header() {
     }
   }
 
+  const showAllItem = () => {
+    dispatch({
+      type: 'REFRESH_DISPLAY_PRODUCTS',
+    })
+  }
+
   return (
     <div className='header'>
 
      {/*  when clicking logo -> go to main homepage */}
      <Link to='/'>
-      <img className='header__logo' src='https://i.imgur.com/B0eaVD2.png'/>
+      <img className='header__logo' src='https://i.imgur.com/B0eaVD2.png' onClick={showAllItem}/>
      </Link>
 
      <Search />

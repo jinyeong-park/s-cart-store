@@ -19,7 +19,7 @@
 
 }
 
-.search__searchInput > input:focus {outline:0;}
+.search__searchInput:focus {outline:0;}
 
 .search__searchIcon {
   padding: 5px;
@@ -28,4 +28,5 @@
   color: white;
   border-radius: 0% 8% 8% 0%;
   border: 2px solid #f43142;
+  cursor: pointer;
 }

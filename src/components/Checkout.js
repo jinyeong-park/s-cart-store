@@ -28,24 +28,7 @@ function Checkout() {
             rating= {item.rating}
             />)}
 
-          {/* <CheckoutItem
-            id='1'
-            title='Diptyque Perfume Doson'
-            condition='Almost new'
-            price={90}
-            image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
-            rating={5}
-          />
 
-
-          <CheckoutItem
-            id='1'
-            title='Diptyque Perfume Doson'
-            condition='Almost new'
-            price={90}
-            image='https://mercari-images.global.ssl.fastly.net/photos/m76577444376_1.jpg?1602650326&w=200&h=200&fitcrop&sharpen'
-            rating={5}
-          /> */}
 
           {/* CheckoutItem */}
           {/* CheckoutItem */}

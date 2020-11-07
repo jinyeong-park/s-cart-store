@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Product.css';
 import { useStateValue } from '../StateProvider';
 import StarIcon from '@material-ui/icons/Star';
@@ -7,9 +7,13 @@ function Product({id, title, condition, price, image, rating }) {
 
 // dispatch: how to manipulate data
 // const [state, dispatch] = useStateValue();
-const [{ cart }, dispatch] = useStateValue();
+// const [{ allItems }, dispatch] = useStateValue();
 // state: global state
 // console.log('cart in Product >>>>', cart)
+
+
+
+
 
 
   const addToCart = () => {
