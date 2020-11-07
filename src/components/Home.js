@@ -17,14 +17,17 @@ function Home() {
         <div className='home_row'>
 
           {
-            displayItems.map(item => (<Product
+            displayItems.map((item) => (
+
+            <Product
               id={item.id}
               title={item.title}
               price={item.price}
               condition={item.condition}
               image={item.image}
               rating={item.rating}
-            />
+          />
+
             ))
           }
           </div>
