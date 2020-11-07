@@ -1,8 +1,9 @@
 .trendingitem__container {
-  margin-top: 60px;
-  height: 5em;
+  margin-top: 20px;
+  height: 2.5em;
   position: relative;
   overflow: hidden;
+
 }
 
 .trendingitem__container > * {
@@ -17,12 +18,12 @@
 
 .trendingitem_number {
   color: #f43142;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
 }
 
 .trendingitem_name {
-  margin-right: 60px;
+  margin-right: 50px;
 }
 
 
@@ -33,12 +34,13 @@
   0% {margin-top: 10em}
   4% {margin-top: 0em}
   20% {margin-top: 0em}
-  25% {margin-top: -5em}
-  40% {margin-top: -5em}
-  45% {margin-top: -10em}
-  60% {margin-top: -10em}
-  65% {margin-top: -15em}
-  80% {margin-top: -15em}
-  85% {margin-top: -20em}
-  100% {margin-top: -20em}
+  25% {margin-top: -2.5em}
+  40% {margin-top: -2.5em}
+  45% {margin-top: -5em}
+  60% {margin-top: -5em}
+  65% {margin-top: -7.5em}
+  80% {margin-top: -7.5em}
+  85% {margin-top: -10em}
+  100% {margin-top: -10em}
 }
+

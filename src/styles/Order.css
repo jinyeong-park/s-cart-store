@@ -3,7 +3,9 @@
   margin: 20px 0;
   border: 1px solid lightgray;
   background-color: white;
-  position: relative
+  position: relative;
+  /* overflow: hidden;
+  z-index: 100 */
 
 }
 

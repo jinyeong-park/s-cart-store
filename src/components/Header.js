@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Header.css';
-import SearchIcon from '@material-ui/icons/Search';
+// import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import Search from './Search';
 import TrendingItems from './TrendingItems';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
@@ -28,10 +29,7 @@ function Header() {
       <img className='header__logo' src='https://i.imgur.com/B0eaVD2.png'/>
      </Link>
 
-    <div className='header__search'>
-      <input className='header__searchInput' type='text' placeholder='Search' />
-      <SearchIcon className='header__searchIcon'/>
-    </div>
+     <Search />
 
     <TrendingItems />
 
