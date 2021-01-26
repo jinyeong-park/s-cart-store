@@ -1,5 +1,5 @@
 # sCart App
-[Link to HelloChat](https://e-commerce-scart.web.app/)
+[Link to sCart](https://e-commerce-scart.web.app/)
   > E-commerce website 'sCart - Find your taste'
   - The easy way to sell or buy almost anything.
   - If you get something you don't use, never used or just outgrew? Sell it.
